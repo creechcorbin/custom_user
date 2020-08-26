@@ -1,0 +1,12 @@
+<div class="container">
+    {% if request.get_full_path == '/signup/' %}
+        <h2>Signup</h2>
+    {% else %}
+        <h2>Login</h2>
+    {% endif %}
+        <form action='' method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type=submit value='Submit'>
+        </form>
+</div>
